@@ -1,0 +1,35 @@
+{
+  "name": "garden",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "server": "node server.js",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@parcel/transformer-sass": "^2.11.0",
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "parcel": "latest",
+    "path-browserify": "^1.0.1",
+    "punycode": "^1.4.1",
+    "sass": "^1.70.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "util": "^0.12.5"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^7.6.8",
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

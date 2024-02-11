@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ботанічний Сад</title>
+    <link rel="icon" type="image/x-icon" href="./images/images/favicon.jpg">
+    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+  <body class="page__body">
+    <header class="header page__header">
+      <div class="container">
+        <img
+          class="header__image"
+          src="./images/images/botsad_main.png"
+          alt="NAMU Museum"
+        >
+
+        <div class="header__content">
+          <div class="header__nav">
+            <a href="#menu" class="header__menu-opener"></a>
+
+
+          </div>
+
+          <h1 class="header__title">Ботанічний Сад</h1>
+
+          <div class="header__tickets tickets">
+            <div class="tickets__title">Квитки</div>
+
+            <a href="#orderpop" class="tickets__button"></a>
+
+
+
+            <div id="orderpop" class="tickets__overlay">
+              <div class="popup">
+                <h2 class="ticket_head">Замовити квиток</h2>
+                <a href="#" class="close">&times;</a>
+                <div class="content">
+                  <form action="/add" method="post" class="ticketform">
+                    <label for="ticket_name" class="tlabels namelabel">Ім'я</label><br>
+                    <input type="text" id="ticket_name" name="name" required class="ticket_inputs nameinput"><br>
+                    <label for="ticket_email" class="tlabels maillabel">Email:</label><br>
+                    <input type="email" id="ticket_email" name="email" required class="ticket_inputs emailinput"><br>
+                    <label for="ticket_quantity" class="tlabels quallabel">Кількість:</label><br>
+                    <input type="number" id="ticket_quantity" name="quantity" min="1" required class="ticket_inputs quantinput"><br>
+                    <label for="ticket_event" class="tlabels evenlabel">Тип квитка:</label><br>
+                    <select id="ticket_event" name="event" class="ticket_inputs selectinput">
+                        <option value="Звичайний квиток" selected>Звичайний квиток</option>
+                        <option value="Школа садівника">Школа садівника</option>
+                        <option value="Різдвяний вернісаж">Різдвяний вернісаж</option>
+                        <option value="Виставка ірисів">Виставка ірисів</option>
+                    </select><br>
+                    <input type="submit" value="Придбати квиток" id="ticket_submit" class="ticket_submit" onclick="sendOrder();">
+                </form>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+
+          <a class="header__to-events">Події</a>
+        </div>
+      </div>
+    </header>
+
+    <aside id="menu" class="page__menu menu">
+      <div class="menu__wrapper">
+        <div class="menu__container container">
+          <div class="menu__nav">
+            <a href="#" class="menu__close"></a>
+
+            <div class="menu__links">
+              <a href="#gallery" class="menu__link">Галерея</a>
+              <a href="#about-us" class="menu__link">Бути в курсі новин</a>
+              <a href="#actuals" class="menu__link">Виставки та події</a>
+              <a href="#contacts" class="menu__link">Контакти</a>
+            </div>
+          </div>
+
+          <div class="menu__information information">
+            <h4 class="information__title">Графік роботи</h4>
+            <div class="information__data">
+              <p class="information__working-hours">
+                <strong>10:00 — 21:00</strong> середа <br>
+                <strong>11:00— 21:00</strong> четвер <br>
+                <strong>12:00— 21:00</strong> п’ятниця <br>
+                <strong>11:00— 19:00</strong> субота <br>
+                <strong>11:00— 19:00</strong> неділя <br>
+                <br>
+              </p>
+
+              <p class="information__days-off">
+                <strong>Вихідні:</strong> понеділок, вівторок<br>
+                Каса припиняє роботу за 1 годину до закриття музею
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section id="actuals" class="page__actuals actuals">
+        <div class="container">
+          <h2 class="actuals__title">Новини та події</h2>
+
+          <article class="actuals__article article">
+            <img
+              src="./images/images/podia1.png"
+              alt="Painting of trees"
+              class="article__picture"
+            >
+
+            <div class="article__info">
+              <div class="article__announce">
+                <h4 class="article__type">ПОДІЯ</h4>
+                <p class="article__date">10.02-25.04.2024</p>
+              </div>
+
+              <h3 class="article__title">Школа Садівника</h3>
+
+              <p class="article__description">
+                Запрошуємо всіх бажаючих на навчання до "Школи Садівника",
+                 де з допомогою провідних фахівців ботанічного саду
+                бажаючі зможуть оволодіти знаннями і досвідом з питань садівництва.
+              </p>
+            </div>
+
+          </article>
+
+          <article class="actuals__article article">
+            <img
+              src="./images/images/podia2.png"
+              alt="Painting of peacock"
+              class="article__picture"
+            >
+
+            <div class="article__info">
+              <div class="article__announce">
+                <h4 class="article__type">ВИСТАВКА</h4>
+                <p class="article__date">23.12-24.12.2023</p>
+              </div>
+
+              <h3 class="article__title">Різдвяний Вернісаж</h3>
+
+              <p class="article__description">
+                Екзотичні рослини, роботи видаткових науковців,
+                смаколики, консультації, технології та насіння -
+                усе це в новорічний виставці для всієї сім'ї
+              </p>
+            </div>
+
+          </article>
+        </div>
+
+        <div class="actuals__event event">
+          <div class="event__background"></div>
+
+          <div class="event__description">
+            <div class="event__announce">
+              <h4 class="event__type">Виставка</h4>
+              <p class="event__date">26.05-28.05.2023</p>
+            </div>
+
+            <h3 class="event__title">Всеукраїнська виставка ірисів</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="page__gallery gallery">
+        <h2 class="gallery__title">Галерея</h2>
+
+        <div class="gallery__images">
+          <img
+            class="gallery__image"
+            src="./images/images/gallery1.png"
+            alt="Beautiful live maze"
+          >
+          <img
+            class="gallery__image"
+            src="./images/images/gallery3.png"
+            alt="Indoors greenhouse"
+          >
+          <img
+            class="gallery__image"
+            src="./images/images/gallery2.png"
+            alt="Middle-road composition"
+          >
+          <img
+            class="gallery__image"
+            src="./images/images/gallery4.png"
+            alt="A piece of wilderness"
+          >
+        </div>
+
+        <div class="gallery__indicators">
+          <div class="gallery__indicator gallery__indicator--is-active"></div>
+          <div class="gallery__indicator"></div>
+          <div class="gallery__indicator"></div>
+          <div class="gallery__indicator"></div>
+        </div>
+      </section>
+
+      <section id="about-us" class="page__subscription subscription">
+        <h2 class="subscription__title">Підписка</h2>
+        <p class="subscription__description">
+          Бути в курсі всіх актуальних подій та останніх новин.
+        </p>
+
+        <form
+          class="subscription__form"
+          onsubmit="this.reset(); return false;"
+        >
+          <input
+            type="email"
+            class="subscription__email"
+            name="e-mail"
+            id="email"
+            placeholder="E-mail"
+            required
+          >
+
+          <button type="submit" class="subscription__button"></button>
+        </form>
+      </section>
+    </main>
+
+
+    <footer class="page__footer footer">
+      <div class="container footer__grid">
+        <div class="footer__socials">
+          <div class="footer__socials-wrapper">
+            <a
+              class="footer__facebook"
+              href="https://www.facebook.com/nbg.kiev.ua"
+              target="_blank"
+            ></a>
+            <a
+              class="footer__instagram"
+              href="https://www.instagram.com/bot_sad_gryshko/"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer__additional">
+          <div class="footer__wrapper">
+            <div class="footer__schedule">
+              <h4 class="footer__title">Графік роботи</h4>
+              <p class="footer__working-hours">
+                <strong>10:00 — 21:00</strong> середа <br>
+                <strong>11:00— 21:00</strong> четвер <br>
+                <strong>12:00— 21:00</strong> п’ятниця <br>
+                <strong>11:00— 19:00</strong> субота <br>
+                <strong>11:00— 19:00</strong> неділя <br>
+                <br>
+                <strong>Вихідні:</strong> понеділок, вівторок<br>
+                Каса припиняє роботу за 1 годину до закриття саду
+              </p>
+            </div>
+
+            <div id="contacts" class="footer__contacts">
+              <h4 class="footer__title">Контакти:</h4>
+
+              <a
+                class="footer__address"
+                href="https://shorturl.at/fhoV3"
+                target="_blank"
+                >
+                1, вулиця Садово-Ботанічна, Київ, 01014
+              </a>
+
+              <a class="footer__tell" href="tel:+38(095)9065319">
+                тел. +38 (095) 906-53-19
+              </a>
+
+              <a class="footer__fax" href="tel:+38(093)8369420">
+                факс +38 (093) 93-69-420
+              </a>
+
+              <a class="footer__email" href="mailto:v.paripsa@knu.ua">
+                e-mail: v.paripsa@knu.ua
+              </a>
+            </div>
+          </div>
+
+          <a href="#" class="back-to-top"></a>
+        </div>
+
+        <div class="footer__line"></div>
+
+        <div class="footer__links">
+          <a href="#gallery" class="footer__link">Галерея</a>
+          <a href="#about-us" class="footer__link">Бути в курсі новин</a>
+          <a href="#actuals" class="footer__link">Події</a>
+          <a href="#contacts" class="footer__link">Контакти</a>
+        </div>
+
+        <div class="footer__copyright">
+          <p class="footer__copyright-info">Designed by N. Neverov & V. Paripsa</p>
+          <p class="footer__copyright-info">Copyright © 2024. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../server.js"></script>
+
+    <script>
+
+      function handleOrderResponse(response) {
+      if (response && response.message) {
+        alert(response.message);
+      }
+       if (response && response.order) {
+      const { name, quantity, event } = response.order;
+      alert(`Бажаємо яскравої прогулянки по нашому саду, ${name}! ${quantity} квитків зарезервовано на подію ${event}.`);
+      }
+    }
+
+
+      async function sendOrder() {
+
+    const name = document.getElementById('ticket_name').value;
+    const email = document.getElementById('ticket_email').value;
+    const quantity = document.getElementById('ticket_quantity').value;
+    const event = document.getElementById('ticket_event').value;
+
+    const orderData = {
+        name: name,
+        email: email,
+        quantity: quantity,
+        event: event
+    };
+
+    try {
+        const response = await fetch('/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderData),
+        });
+
+        const responseData = await response.json();
+        handleOrderResponse(responseData);
+    } catch (error) {
+        console.error('Error sending order:', error);
+
+    }
+}
+
+  </script>
+  </body>
+</html>
